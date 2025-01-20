@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/kdh_css/find.css">
+   <link rel="stylesheet" href="/krh_css/main.css">
   <!-- jQuery CDN 추가 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- 사용자 정의 JS -->

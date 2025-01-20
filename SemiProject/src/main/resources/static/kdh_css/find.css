@@ -1,10 +1,10 @@
-header {
+/* header {
   font-family:"Hahmlet", serif;
   position: fixed;
   top:0;
   left: 0;
   color: #000000;
-  height: 100px;
+  height: 100%;
   width: 100%;
   padding: 20px 0;
   text-align: center;
@@ -27,13 +27,16 @@ header nav ul li a {
   font-family:"Hahmlet", serif;
   color: #000000;
   text-decoration: none;
-}
+} */
 
 /* 전체 페이지 높이를 설정 */
-html, body {
+body {
   margin: 0;
   padding: 0;
   height: 100%; 
+    padding-top: 140px; /* 헤더 높이 + 추가 간격 */
+  padding-bottom: 60px; /* 푸터 높이 + 추가 간격 */
+  box-sizing: border-box; /* 여백 포함한 높이 계산 */
 }
 
 /* 메인 컨테이너 설정 */
@@ -45,7 +48,6 @@ html, body {
 /* 헤더 설정 */
 header {
   font-family:"Hahmlet", serif;
-  position: fixed;
   top: 0;
   left: 0;
   color: #000000;
@@ -66,7 +68,7 @@ header {
   box-sizing: border-box;
   max-width: 600px; /* 폼 최대 너비 설정 */
   width: 100%; 
-  margin: 0 auto; /* 중앙 정렬을 위한 자동 마진 */
+  margin: 200px auto; /* 중앙 정렬을 위한 자동 마진 */
   border-radius: 10px; /* 모서리 둥글게 */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
   background-color: #ffffff; /* 배경색 */
@@ -76,18 +78,6 @@ header {
 }
 
 /* 푸터 스타일 */
-#footers {
-  background-color: #c4c4c4;
-  color: #000;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  height: 20%;
-  width: 100%;
-  position: fixed; /* 화면 하단 고정 */
-  bottom: 0;
-  left: 0;
-}
 
 h1 {
   font-family:"Hahmlet", serif;
@@ -260,6 +250,7 @@ h1 {
       justify-content: center;
       align-items: center;
       z-index: 1000;
+      margin: 200px auto;
     }
 
     .modal.hidden {

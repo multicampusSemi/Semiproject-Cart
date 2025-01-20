@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/kdh_css/find.css">
+  <!-- jQuery CDN 추가 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 사용자 정의 JS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find ID/PW</title>
+</head>
+
+<body>
+ <%@ include file="/WEB-INF/views/krhheader.jsp" %>
+
+  <div class="container">
+    <h1>Find ID/PW</h1>
+    <div class="tabs">
+      <button class="tab active" id="find-id-tab">아이디 찾기</button>
+      <button class="tab" id="find-pw-tab">비밀번호 찾기</button>
+    </div>
+
+    <!-- 아이디 찾기 폼 -->
+    <form class="form" id="find-id-form">
+      <div class="input-group">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+      </div>
+      <div class="input-group">
+        <label for="email-search">이메일</label>
+        <input type="email" id="email-search" name="email-search" placeholder="이메일을 입력하세요" required>
+      </div>
+      <!-- 아이디 표시 영역 -->
+<div id="messages">
+  <p id="message" class="result_id"></p>
+</div>
+
+
+      <button type="button" id="find-id-btn" class="submit-btn">아이디 찾기</button>
+    </form>
+
+   <!-- 비밀번호 찾기 폼 -->
+<form class="form hidden" id="find-pw-form">
+<div class="input-flied">
+  <div class="input-group">
+    <label for="id">아이디</label>
+    <input type="text" id="username-pw" name="id" placeholder="아이디를 입력하세요" required>
+  </div>
+  <div class="input-group">
+    <label for="name-pw">이름</label>
+    <input type="text" id="name-pw" name="name-pw" placeholder="이름을 입력하세요" required>
+  </div>
+  <div class="input-group">
+    <label for="email-pw">이메일</label>
+    <input type="email" id="email-pw" placeholder="이메일을 입력하세요">
+    <button type="button" id="send-code-btn" class="action-btn">인증</button>
+  </div>
+  <div class="input-group">
+    <label for="email-code-pw">인증번호</label>
+    <input type="text" id="email-code-pw" name="email-code-pw" placeholder="인증번호를 입력하세요" required>
+    <button type="button" id="verify-code-btn" class="action-btn">인증 확인</button>
+  </div>
+  <button type="button" class="submit-btn" id="reset-password-btn">비밀번호 재설정</button>
+  </div>
+</form>
+	
+  </div>
+<!-- 모달 -->
+  <div id="password-reset-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>비밀번호 재설정</h2>
+      <form id="reset-password-form">
+        <div class="input-group">
+          <label for="new-password">새 비밀번호</label>
+          <input type="password" id="new-password" name="new-password" placeholder="새 비밀번호를 입력하세요" required>
+          <small id="password-feedback" class="error-message">8자 이상이며 숫자,특수문자를 포함해야 합니다.</small>
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">비밀번호 확인</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="비밀번호를 다시 입력하세요" required>
+          <small id="confirm-feedback" class="error-message">비밀번호가 일치하지 않습니다.</small>
+        </div>
+        <button type="submit" class="submit-btn">비밀번호 변경</button>
+      </form>
+      <button class="action-btn close-btn" id="close-modal-btn">닫기</button>
+    </div>
+  </div>
+  <script src="${pageContext.request.contextPath}/kdh_js/find.js"></script>
+   
+  <div id="footers">
+        <%@ include file="/WEB-INF/views/krhfooter.jsp" %>
+        </div>
+</body>
+</html>

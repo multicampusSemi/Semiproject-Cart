@@ -38,6 +38,7 @@ body {
   font-family: "Hahmlet", serif;
 }
 
+
 /* h2 */
 h2 {
   text-align: center;
@@ -253,13 +254,14 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;   
-  
+  width: 100%;
 }
 
 #login {
   font-family: "Hahmlet", serif;
   
 }
+
 
 h2 {
   font-size: 40px;
